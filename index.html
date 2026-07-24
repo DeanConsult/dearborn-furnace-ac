@@ -106,8 +106,8 @@
     .btn-outline:hover { border-color: var(--white); }
     .hero-form-wrap { display: flex; flex-direction: column; justify-content: center; padding: 24px 0 24px 0; }
     .hero-form-panel { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.25); }
-    .hero-form-credible { background: var(--white); padding: 14px 24px 0; text-align: center; }
-    .hero-form-credible img { max-width: 100%; height: auto; }
+    .hero-form-credible { background: var(--white); padding: 14px 24px 0; text-align: center; display: flex; justify-content: center; }
+    .hero-form-credible img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
     .hero-form-header { background: var(--orange); padding: 16px 24px; }
     .hero-form-header h3 { font-size: 1.05rem; font-weight: 800; color: var(--white); margin-bottom: 2px; }
     .hero-form-sub { font-size: 0.76rem; color: rgba(255,255,255,0.85); }
@@ -237,10 +237,17 @@
     .award-badge-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1; }
     .award-badge-text strong { display: block; font-size: 0.88rem; color: var(--slate); font-weight: 700; margin-bottom: 2px; }
     .award-badge-text span { font-size: 0.8rem; color: var(--muted); }
-    .areas-section { background: var(--gray); }
-    .areas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-top: 24px; }
-    .area-chip { background: var(--white); border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; text-align: center; font-size: 0.88rem; font-weight: 600; color: var(--slate); transition: border-color .2s; }
-    .area-chip:hover { border-color: var(--orange); }
+    .reviews-section { background: var(--gray); }
+    .reviews-header { display: flex; align-items: center; gap: 16px; margin-bottom: 40px; flex-wrap: wrap; }
+    .reviews-header img { height: 32px; width: auto; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .review-card { background: var(--white); border-radius: 12px; padding: 28px 24px; box-shadow: var(--shadow); }
+    .review-stars { color: #f59e0b; font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 12px; }
+    .review-text { font-size: 0.95rem; color: #374151; line-height: 1.75; margin-bottom: 18px; font-style: italic; }
+    .review-author { display: flex; align-items: center; gap: 12px; }
+    .review-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--orange); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem; flex-shrink: 0; }
+    .review-name { font-weight: 700; font-size: 0.9rem; color: var(--slate); }
+    .review-source { font-size: 0.78rem; color: var(--muted); }
   </style>
 </head>
 <body>
@@ -485,28 +492,47 @@
   </div>
 </section>
 
-<section class="areas-section">
+<section class="reviews-section">
   <div class="section-inner">
-    <div class="section-label">Where We Work</div>
-    <div class="section-title">Serving Dearborn MI &amp; the Surrounding Metro Detroit Area</div>
-    <p class="section-sub" style="margin-bottom:24px;">Based in Dearborn, we provide furnace repair, AC repair, and full HVAC service throughout Wayne County and the greater Metro Detroit region for both residential and commercial customers.</p>
-    <div class="areas-grid">
-      <div class="area-chip">Dearborn</div>
-      <div class="area-chip">Dearborn Heights</div>
-      <div class="area-chip">Detroit</div>
-      <div class="area-chip">Allen Park</div>
-      <div class="area-chip">Lincoln Park</div>
-      <div class="area-chip">Melvindale</div>
-      <div class="area-chip">Southgate</div>
-      <div class="area-chip">Wyandotte</div>
-      <div class="area-chip">Taylor</div>
-      <div class="area-chip">Westland</div>
-      <div class="area-chip">Garden City</div>
-      <div class="area-chip">Inkster</div>
-      <div class="area-chip">Romulus</div>
-      <div class="area-chip">Canton</div>
-      <div class="area-chip">Livonia</div>
-      <div class="area-chip">Redford</div>
+    <div class="section-label">Customer Reviews</div>
+    <div class="reviews-header">
+      <div class="section-title" style="margin-bottom:0">What Our Customers Are Saying</div>
+      <img src="images/google-logo.png" alt="Google Reviews" />
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"Our furnace went out on one of the coldest nights of the year. I called Dearborn Furnace and they had a technician at my house within two hours. He fixed the problem quickly and the price was very fair. I would highly recommend them to anyone in the Dearborn area."</p>
+        <div class="review-author">
+          <div class="review-avatar">M</div>
+          <div>
+            <div class="review-name">Mike T.</div>
+            <div class="review-source">Dearborn, MI &mdash; Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"I've been using Dearborn Furnace and Air Conditioning for years. They replaced my old AC unit last summer and did an amazing job. The technicians are professional, knowledgeable, and respectful of your home. Prices are honest and they never try to upsell you on things you don't need."</p>
+        <div class="review-author">
+          <div class="review-avatar">S</div>
+          <div>
+            <div class="review-name">Sandra K.</div>
+            <div class="review-source">Dearborn Heights, MI &mdash; Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"Called them on a Saturday morning when my AC stopped working. They came out same day, diagnosed the issue in minutes, and had it running again before noon. Fantastic service and very affordable. This is the only HVAC company I will ever call."</p>
+        <div class="review-author">
+          <div class="review-avatar">R</div>
+          <div>
+            <div class="review-name">Robert A.</div>
+            <div class="review-source">Allen Park, MI &mdash; Google Review</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
