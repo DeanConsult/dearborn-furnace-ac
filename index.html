@@ -224,6 +224,23 @@
     .mobile-call-btn { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: var(--orange); color: var(--white); text-align: center; padding: 16px; font-weight: 800; font-size: 1.1rem; letter-spacing: .01em; box-shadow: 0 -4px 16px rgba(0,0,0,0.2); }
     .mobile-call-btn:hover { background: var(--orange-dark); }
     @media (max-width: 768px) { .mobile-call-btn { display: block; } body { padding-bottom: 58px; } }
+    .awards-strip { background: #162230; padding: 11px 24px; border-top: 1px solid rgba(255,255,255,0.06); }
+    .awards-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .award-chip { color: rgba(255,255,255,0.85); font-size: 0.8rem; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+    .about-snippet-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    @media (max-width: 768px) { .about-snippet-grid { grid-template-columns: 1fr; } }
+    .about-snippet-img { border-radius: 14px; overflow: hidden; height: 380px; }
+    .about-snippet-img img { width: 100%; height: 100%; object-fit: cover; }
+    .about-snippet-text p { font-size: 0.97rem; color: #374151; line-height: 1.8; margin-bottom: 16px; }
+    .award-badges { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
+    .award-badge { display: flex; align-items: flex-start; gap: 12px; background: var(--gray); border-radius: 10px; padding: 14px 16px; }
+    .award-badge-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1; }
+    .award-badge-text strong { display: block; font-size: 0.88rem; color: var(--slate); font-weight: 700; margin-bottom: 2px; }
+    .award-badge-text span { font-size: 0.8rem; color: var(--muted); }
+    .areas-section { background: var(--gray); }
+    .areas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-top: 24px; }
+    .area-chip { background: var(--white); border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; text-align: center; font-size: 0.88rem; font-weight: 600; color: var(--slate); transition: border-color .2s; }
+    .area-chip:hover { border-color: var(--orange); }
   </style>
 </head>
 <body>
@@ -310,11 +327,18 @@
   </div>
 </div>
 
+<div class="awards-strip">
+  <div class="awards-inner">
+    <div class="award-chip">&#127942; Top Heating &amp; Cooling Company — Metro Detroit Review, December 2020</div>
+    <div class="award-chip">&#127942; Top 100 HVAC Companies in Michigan — Michigan Review Board, June 2021</div>
+  </div>
+</div>
+
 <section class="services-bg">
   <div class="section-inner">
     <div class="section-label">What We Do</div>
-    <div class="section-title">Full-Service Heating &amp; Cooling</div>
-    <p class="section-sub">Dearborn Furnace and Air Conditioning welcomes you. We are a full-service company that can help with all of your heating and cooling needs. With over 20 years of experience, we have an amazing reputation in the Dearborn MI area — most of our clients are repeat customers or referrals from friends, family, and neighbors.</p>
+    <div class="section-title">Furnace Repair, AC Repair &amp; HVAC Services in Dearborn MI</div>
+    <p class="section-sub">Dearborn Furnace and Air Conditioning is a full-service HVAC company serving Dearborn MI and Metro Detroit for over 20 years. From furnace repair and installation to AC repair, AC installation, humidifiers, and air quality — we handle it all for both residential and commercial customers. Most of our clients are repeat customers or referrals from friends and family.</p>
     <div class="services-grid">
       <div class="service-card">
         <div class="card-img"><img src="images/istockphoto-187497997-612x612.jpg" alt="Furnace repair technician in Dearborn MI" loading="lazy" /></div>
@@ -393,10 +417,43 @@
   </div>
 </section>
 
+<section>
+  <div class="section-inner">
+    <div class="about-snippet-grid">
+      <div class="about-snippet-img">
+        <img src="images/istockphoto-1295705020-612x612.jpg" alt="Happy Dearborn family with properly working furnace and AC system" loading="lazy" />
+      </div>
+      <div class="about-snippet-text">
+        <div class="section-label">Who We Are</div>
+        <div class="section-title">Dearborn's Trusted HVAC Experts — Over 20 Years of Service</div>
+        <p>Dearborn Furnace and Air Conditioning has been serving Dearborn MI and the greater Metro Detroit area since the early 2000s. We specialize in all areas of HVAC — furnace repair, furnace installation, air conditioning repair and installation, whole-house humidifiers, and air filtration systems.</p>
+        <p>We consider our customer service, pricing, and expertise to be unmatched. Most of our customers are repeat clients or referrals from friends and family — a track record we're proud of. All technicians complete a rigorous training program and attend quarterly continued education on the latest HVAC technologies.</p>
+        <div class="award-badges">
+          <div class="award-badge">
+            <div class="award-badge-icon">&#127942;</div>
+            <div class="award-badge-text">
+              <strong>Top Heating &amp; Cooling Company — Metro Detroit Review</strong>
+              <span>December 10, 2020 — Ranked among the best HVAC companies in the Detroit area based on customer reviews.</span>
+            </div>
+          </div>
+          <div class="award-badge">
+            <div class="award-badge-icon">&#127942;</div>
+            <div class="award-badge-text">
+              <strong>Top 100 HVAC Companies in Michigan — Michigan Review Board</strong>
+              <span>June 15, 2021 — Recognized among the top HVAC contractors statewide.</span>
+            </div>
+          </div>
+        </div>
+        <a href="about/" style="display:inline-block; margin-top:24px; background:var(--orange); color:var(--white); padding:12px 24px; border-radius:var(--radius); font-weight:700; font-size:0.9rem; transition:background .2s;" onmouseover="this.style.background='#c44d1f'" onmouseout="this.style.background='#e05c28'">Learn More About Us &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="faq">
   <div class="section-inner">
     <div class="section-label">Common Questions</div>
-    <div class="section-title">Frequently Asked Questions</div>
+    <div class="section-title">Frequently Asked Questions About HVAC Service in Dearborn MI</div>
     <div class="faq-item">
       <h3>Do you offer 24/7 emergency furnace or AC repair in Dearborn?</h3>
       <p>Yes. We understand that heating and cooling problems don't just occur during business hours. We are available 24 hours a day, 7 days a week and will get a professional technician out to your home or business quickly.</p>
@@ -417,6 +474,40 @@
       <h3>How do I know if I need furnace repair or a full replacement?</h3>
       <p>The average life of a furnace is 15–20 years. Our specialists will come out, troubleshoot the problem, and give you all the information you need to make an informed decision — repair or replace — with no pressure.</p>
     </div>
+    <div class="faq-item">
+      <h3>Are you licensed and insured?</h3>
+      <p>Yes. Dearborn Furnace and Air Conditioning is fully licensed and insured in Michigan. All of our technicians are trained professionals who are held to the highest standards in the HVAC industry.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How quickly can you come out for a furnace or AC repair in Dearborn?</h3>
+      <p>We aim to get to you as quickly as possible — often the same day. For emergency situations involving heating or cooling failure, we are available 24 hours a day, 7 days a week including weekends and holidays.</p>
+    </div>
+  </div>
+</section>
+
+<section class="areas-section">
+  <div class="section-inner">
+    <div class="section-label">Where We Work</div>
+    <div class="section-title">Serving Dearborn MI &amp; the Surrounding Metro Detroit Area</div>
+    <p class="section-sub" style="margin-bottom:24px;">Based in Dearborn, we provide furnace repair, AC repair, and full HVAC service throughout Wayne County and the greater Metro Detroit region for both residential and commercial customers.</p>
+    <div class="areas-grid">
+      <div class="area-chip">Dearborn</div>
+      <div class="area-chip">Dearborn Heights</div>
+      <div class="area-chip">Detroit</div>
+      <div class="area-chip">Allen Park</div>
+      <div class="area-chip">Lincoln Park</div>
+      <div class="area-chip">Melvindale</div>
+      <div class="area-chip">Southgate</div>
+      <div class="area-chip">Wyandotte</div>
+      <div class="area-chip">Taylor</div>
+      <div class="area-chip">Westland</div>
+      <div class="area-chip">Garden City</div>
+      <div class="area-chip">Inkster</div>
+      <div class="area-chip">Romulus</div>
+      <div class="area-chip">Canton</div>
+      <div class="area-chip">Livonia</div>
+      <div class="area-chip">Redford</div>
+    </div>
   </div>
 </section>
 
@@ -429,7 +520,9 @@
     { "@type": "Question", "name": "Do you offer financing for a new furnace or AC?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer financing options for new furnace and AC installations so you can pay over time." } },
     { "@type": "Question", "name": "What areas do you serve?", "acceptedAnswer": { "@type": "Answer", "text": "We serve Dearborn MI and the entire Metro Detroit area for both residential and commercial heating and cooling." } },
     { "@type": "Question", "name": "Do you service all brands and models?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our trained professionals service all makes and models of furnaces and air conditioners." } },
-    { "@type": "Question", "name": "How do I know if I need furnace repair or a full replacement?", "acceptedAnswer": { "@type": "Answer", "text": "The average life of a furnace is 15–20 years. Our specialists will troubleshoot the problem and give you all the information you need to make an informed decision with no pressure." } }
+    { "@type": "Question", "name": "How do I know if I need furnace repair or a full replacement?", "acceptedAnswer": { "@type": "Answer", "text": "The average life of a furnace is 15–20 years. Our specialists will troubleshoot the problem and give you all the information you need to make an informed decision with no pressure." } },
+    { "@type": "Question", "name": "Are you licensed and insured?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Dearborn Furnace and Air Conditioning is fully licensed and insured in Michigan. All of our technicians are trained professionals held to the highest industry standards." } },
+    { "@type": "Question", "name": "How quickly can you come out for a furnace or AC repair in Dearborn?", "acceptedAnswer": { "@type": "Answer", "text": "We aim to get to you as quickly as possible — often the same day. For emergencies we are available 24 hours a day, 7 days a week including weekends and holidays." } }
   ]
 }
 </script>
